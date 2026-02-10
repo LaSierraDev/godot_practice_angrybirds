@@ -40,13 +40,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 37.0
-height = 114.0
+radius = 33.0
+height = 86.0
 
 [node name="Player" type="RigidBody2D" unique_id=160490403]
 input_pickable = true
 freeze = true
 script = ExtResource("1_g2els")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1005890569]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
@@ -60,4 +61,3 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3vyb7")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
