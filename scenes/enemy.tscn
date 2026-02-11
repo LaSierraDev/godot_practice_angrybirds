@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuce4k0ax25hf"]
 
 [ext_resource type="Texture2D" uid="uid://b3m7iygmjetxa" path="res://assets/sprites/monster.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://btip5anhj0hh5" path="res://scripts/enemy.gd" id="1_md0e3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7p1mj"]
 atlas = ExtResource("1_7p1mj")
@@ -28,6 +29,9 @@ animations = [{
 size = Vector2(58, 72)
 
 [node name="Enemy" type="RigidBody2D" unique_id=1319069159]
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("1_md0e3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=984725159]
 sprite_frames = SubResource("SpriteFrames_md0e3")

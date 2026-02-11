@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://4ugc3vu4o80t" path="res://assets/sprites/bg.png" id="1_2q6dc"]
 [ext_resource type="Texture2D" uid="uid://cabkhsumpk3c3" path="res://assets/sprites/ground.png" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://cuce4k0ax25hf" path="res://scenes/enemy.tscn" id="3_ppgk2"]
 [ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://staidnkihfp1" path="res://scenes/crate.tscn" id="4_2r41h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(2400, 160)
@@ -42,6 +44,18 @@ texture = ExtResource("2_w7c3h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2" unique_id=182862087]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="Enemy" parent="Enviroment" unique_id=1319069159 instance=ExtResource("3_ppgk2")]
+position = Vector2(1508, 848)
+
+[node name="Enemy2" parent="Enviroment" unique_id=911877821 instance=ExtResource("3_ppgk2")]
+position = Vector2(1660, 854)
+
+[node name="Crate" parent="Enviroment" unique_id=1644300792 instance=ExtResource("4_2r41h")]
+position = Vector2(1774, 916)
+
+[node name="Crate2" parent="Enviroment" unique_id=2108321909 instance=ExtResource("4_2r41h")]
+position = Vector2(1772, 809)
 
 [node name="PlayerSpawner" type="Marker2D" parent="." unique_id=2077864525]
 position = Vector2(362, 652)

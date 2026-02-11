@@ -44,13 +44,13 @@ animations = [{
 radius = 33.0
 height = 86.0
 
-[node name="Player" type="RigidBody2D" unique_id=160490403]
+[node name="Player" type="RigidBody2D" unique_id=160490403 groups=["player"]]
 input_pickable = true
 freeze = true
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1283263924]
+[node name="Line2D" type="Line2D" parent="." unique_id=1283263924 groups=["player"]]
 texture_filter = 1
 texture_repeat = 2
 points = PackedVector2Array(0, 0, 0, 0)

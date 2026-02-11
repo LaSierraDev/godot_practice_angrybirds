@@ -1,9 +1,8 @@
 extends RigidBody2D
 
 @onready var line_2d: Line2D = $Line2D
-
 @export var force_impulse: float = 10.0
-@export var max_drag_distances: float = 150.0
+const MAX_DRAG_DISTANCES: float = 150.0
 
 var is_dragged: bool = false
 var is_moved: bool = false
@@ -11,7 +10,7 @@ var start_position: Vector2
 
 func _ready() -> void:
 	start_position = self.position
-	sleeping_state_changed.connect(_on_sleeping_state_changed)
+	self.sleeping_state_changed.connect(_on_sleeping_state_changed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
@@ -37,8 +36,8 @@ func _drag():
 	var mouse_position = get_global_mouse_position()
 	var drag_vector = mouse_position - start_position
 	
-	if drag_vector.length() > max_drag_distances:
-		drag_vector = drag_vector.normalized() * max_drag_distances
+	if drag_vector.length() > MAX_DRAG_DISTANCES:
+		drag_vector = drag_vector.normalized() * MAX_DRAG_DISTANCES
 	
 	if drag_vector.x > 0: 
 		drag_vector.x = 0
