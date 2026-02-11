@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bo72exvjv3c2q" path="res://assets/sprites/bird.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://d0woy38yxmmdf" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://d3w4vv47p4awj" path="res://assets/sprites/circles.png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -48,6 +49,14 @@ input_pickable = true
 freeze = true
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1283263924]
+texture_filter = 1
+texture_repeat = 2
+points = PackedVector2Array(0, 0, 0, 0)
+default_color = Color(0.8784314, 0.23529412, 0.2, 1)
+texture = ExtResource("3_qhqgy")
+texture_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1005890569]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
