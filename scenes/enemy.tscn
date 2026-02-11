@@ -30,7 +30,7 @@ size = Vector2(58, 72)
 
 [node name="Enemy" type="RigidBody2D" unique_id=1319069159]
 contact_monitor = true
-max_contacts_reported = 2
+max_contacts_reported = 1
 script = ExtResource("1_md0e3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=984725159]
