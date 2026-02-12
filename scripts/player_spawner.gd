@@ -1,6 +1,6 @@
 extends Marker2D
 
-@export var player_Scene: PackedScene = preload("res://scenes/player.tscn")
+@onready var player_Scene: PackedScene = preload("res://scenes/player.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
