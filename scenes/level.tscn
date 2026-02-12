@@ -48,6 +48,8 @@ shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="FollowCamera" type="Camera2D" parent="." unique_id=1745018961]
 position = Vector2(960, 540)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
 script = ExtResource("6_2r41h")
 
 [node name="PlayerSpawner" type="Marker2D" parent="." unique_id=2077864525]

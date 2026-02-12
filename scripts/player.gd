@@ -1,8 +1,10 @@
 extends RigidBody2D
 
-@onready var line_2d: Line2D = $Line2D
-@export var force_impulse: float = 10.0
+const VECTOR_IMPULSE: Vector2 = Vector2(10, 10)
 const MAX_DRAG_DISTANCES: float = 200.0
+
+@onready var line_2d: Line2D = $Line2D
+@export var force_impulse: float = 20.0
 
 var is_dragged: bool = false
 var is_moved: bool = false
