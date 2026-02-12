@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cuce4k0ax25hf" path="res://scenes/enemy.tscn" id="3_ppgk2"]
 [ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://staidnkihfp1" path="res://scenes/crate.tscn" id="4_2r41h"]
+[ext_resource type="Script" uid="uid://dbytgji44in8p" path="res://scripts/follow_camera.gd" id="6_2r41h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(2400, 160)
@@ -45,6 +46,10 @@ texture = ExtResource("2_w7c3h")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_w8frs")
 
+[node name="FollowCamera" type="Camera2D" parent="." unique_id=1745018961]
+position = Vector2(960, 540)
+script = ExtResource("6_2r41h")
+
 [node name="PlayerSpawner" type="Marker2D" parent="." unique_id=2077864525]
 position = Vector2(362, 652)
 script = ExtResource("3_w8frs")
@@ -58,28 +63,8 @@ position = Vector2(1774, 916)
 [node name="Crate2" parent="." unique_id=496545714 instance=ExtResource("4_2r41h")]
 position = Vector2(1774, 815)
 
-[node name="Test cajas" type="Node2D" parent="." unique_id=73167126]
+[node name="Crate3" parent="." unique_id=685522289 instance=ExtResource("4_2r41h")]
+position = Vector2(1774, 714)
 
-[node name="Enemy" parent="Test cajas" unique_id=1319069159 instance=ExtResource("3_ppgk2")]
-position = Vector2(1573, 924)
-
-[node name="Enemy3" parent="Test cajas" unique_id=244540780 instance=ExtResource("3_ppgk2")]
-position = Vector2(1360, 924)
-
-[node name="Enemy4" parent="Test cajas" unique_id=426344244 instance=ExtResource("3_ppgk2")]
-position = Vector2(944, 924)
-
-[node name="Enemy5" parent="Test cajas" unique_id=996485126 instance=ExtResource("3_ppgk2")]
-position = Vector2(1170, 924)
-
-[node name="Crate3" parent="Test cajas" unique_id=1444306337 instance=ExtResource("4_2r41h")]
-position = Vector2(943, 765)
-
-[node name="Crate4" parent="Test cajas" unique_id=467332760 instance=ExtResource("4_2r41h")]
-position = Vector2(1170, 652)
-
-[node name="Crate5" parent="Test cajas" unique_id=1788012267 instance=ExtResource("4_2r41h")]
-position = Vector2(1360, 515)
-
-[node name="Crate6" parent="Test cajas" unique_id=1771578127 instance=ExtResource("4_2r41h")]
-position = Vector2(1572, 325)
+[node name="Crate4" parent="." unique_id=1010584632 instance=ExtResource("4_2r41h")]
+position = Vector2(1774, 613)

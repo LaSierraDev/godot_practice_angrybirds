@@ -2,7 +2,7 @@ extends RigidBody2D
 
 @onready var line_2d: Line2D = $Line2D
 @export var force_impulse: float = 10.0
-const MAX_DRAG_DISTANCES: float = 150.0
+const MAX_DRAG_DISTANCES: float = 200.0
 
 var is_dragged: bool = false
 var is_moved: bool = false
