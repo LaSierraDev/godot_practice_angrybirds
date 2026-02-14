@@ -6,7 +6,6 @@ var _player = null
 
 func _ready() -> void:
 	player_spawner.player_spawned.connect(_on_player_spawner_player_spawned)
-	print(player_spawner.get_signal_connection_list("player_spawned"))
 
 func _process(_delta: float) -> void:
 	if not _player:

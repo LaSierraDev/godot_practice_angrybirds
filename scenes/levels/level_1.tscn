@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ca67vttmdke7q"]
+
+[ext_resource type="PackedScene" uid="uid://5jlpy0ibuah" path="res://scenes/levelBase.tscn" id="1_ksju7"]
+[ext_resource type="PackedScene" uid="uid://staidnkihfp1" path="res://scenes/crate.tscn" id="2_6iamk"]
+[ext_resource type="PackedScene" uid="uid://cuce4k0ax25hf" path="res://scenes/enemy.tscn" id="2_nsrm0"]
+
+[node name="Level1" unique_id=1314270150 instance=ExtResource("1_ksju7")]
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(2004617577) index="0" unique_id=1319069159 instance=ExtResource("2_nsrm0")]
+position = Vector2(1760, 920)
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(2004617577) index="1" unique_id=21645073 instance=ExtResource("2_nsrm0")]
+position = Vector2(1520, 920)
+
+[node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(2004617577) index="2" unique_id=668961929 instance=ExtResource("2_nsrm0")]
+position = Vector2(1640, 420)
+
+[node name="Crate" parent="Crates" parent_id_path=PackedInt32Array(351633542) index="0" unique_id=1644300792 instance=ExtResource("2_6iamk")]
+position = Vector2(1640, 920)
+
+[node name="Crate2" parent="Crates" parent_id_path=PackedInt32Array(351633542) index="1" unique_id=1206973768 instance=ExtResource("2_6iamk")]
+position = Vector2(1640, 820)
+
+[node name="Crate3" parent="Crates" parent_id_path=PackedInt32Array(351633542) index="2" unique_id=503864573 instance=ExtResource("2_6iamk")]
+position = Vector2(1640, 720)
+
+[node name="Crate4" parent="Crates" parent_id_path=PackedInt32Array(351633542) index="3" unique_id=86156897 instance=ExtResource("2_6iamk")]
+position = Vector2(1640, 620)
+
+[node name="Crate5" parent="Crates" parent_id_path=PackedInt32Array(351633542) index="4" unique_id=1103218056 instance=ExtResource("2_6iamk")]
+position = Vector2(1640, 520)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CrazyBirds"
-run/main_scene="uid://cl4aip1fdb2cj"
+run/main_scene="uid://5jlpy0ibuah"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

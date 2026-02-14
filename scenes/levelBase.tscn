@@ -1,27 +1,25 @@
-[gd_scene format=3 uid="uid://cl4aip1fdb2cj"]
+[gd_scene format=3 uid="uid://5jlpy0ibuah"]
 
-[ext_resource type="Texture2D" uid="uid://4ugc3vu4o80t" path="res://assets/sprites/bg.png" id="1_2q6dc"]
-[ext_resource type="Texture2D" uid="uid://cabkhsumpk3c3" path="res://assets/sprites/ground.png" id="2_w7c3h"]
-[ext_resource type="PackedScene" uid="uid://cuce4k0ax25hf" path="res://scenes/enemy.tscn" id="3_ppgk2"]
-[ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="3_w8frs"]
-[ext_resource type="PackedScene" uid="uid://staidnkihfp1" path="res://scenes/crate.tscn" id="4_2r41h"]
-[ext_resource type="Script" uid="uid://dbytgji44in8p" path="res://scripts/follow_camera.gd" id="6_2r41h"]
+[ext_resource type="Texture2D" uid="uid://4ugc3vu4o80t" path="res://assets/sprites/bg.png" id="1_k3o3r"]
+[ext_resource type="Texture2D" uid="uid://cabkhsumpk3c3" path="res://assets/sprites/ground.png" id="2_0ui80"]
+[ext_resource type="Script" uid="uid://dbytgji44in8p" path="res://scripts/follow_camera.gd" id="3_uo60w"]
+[ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="4_3xyx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(2400, 160)
 
-[node name="Level" type="Node2D" unique_id=1314270150]
+[node name="LevelBase" type="Node2D" unique_id=1314270150]
 
 [node name="Enviroment" type="Node2D" parent="." unique_id=459618490]
 
 [node name="Background" type="Sprite2D" parent="Enviroment" unique_id=1858273697]
 position = Vector2(1021, 525)
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_k3o3r")
 metadata/_edit_lock_ = true
 
 [node name="Background2" type="Sprite2D" parent="Enviroment" unique_id=861272361]
 position = Vector2(3421, 525)
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_k3o3r")
 metadata/_edit_lock_ = true
 
 [node name="Ground" type="StaticBody2D" parent="Enviroment" unique_id=806998333]
@@ -29,7 +27,7 @@ position = Vector2(1021, 1047)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground" unique_id=32161130]
-texture = ExtResource("2_w7c3h")
+texture = ExtResource("2_0ui80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground" unique_id=1001089038]
 position = Vector2(0, 1)
@@ -40,7 +38,7 @@ position = Vector2(3421, 1047)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground2" unique_id=2062501684]
-texture = ExtResource("2_w7c3h")
+texture = ExtResource("2_0ui80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2" unique_id=182862087]
 position = Vector2(0, 1)
@@ -50,23 +48,12 @@ shape = SubResource("RectangleShape2D_w8frs")
 position = Vector2(960, 540)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
-script = ExtResource("6_2r41h")
+script = ExtResource("3_uo60w")
 
 [node name="PlayerSpawner" type="Marker2D" parent="." unique_id=2077864525]
 position = Vector2(362, 652)
-script = ExtResource("3_w8frs")
+script = ExtResource("4_3xyx3")
 
-[node name="Enemy2" parent="." unique_id=921570865 instance=ExtResource("3_ppgk2")]
-position = Vector2(1878, 930)
+[node name="Enemies" type="Node2D" parent="." unique_id=2004617577]
 
-[node name="Crate" parent="." unique_id=1644300792 instance=ExtResource("4_2r41h")]
-position = Vector2(1774, 916)
-
-[node name="Crate2" parent="." unique_id=496545714 instance=ExtResource("4_2r41h")]
-position = Vector2(1774, 815)
-
-[node name="Crate3" parent="." unique_id=685522289 instance=ExtResource("4_2r41h")]
-position = Vector2(1774, 714)
-
-[node name="Crate4" parent="." unique_id=1010584632 instance=ExtResource("4_2r41h")]
-position = Vector2(1774, 613)
+[node name="Crates" type="Node2D" parent="." unique_id=351633542]
