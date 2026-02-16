@@ -3,8 +3,8 @@ extends RigidBody2D
 const VECTOR_IMPULSE: Vector2 = Vector2(10, 10)
 const MAX_DRAG_DISTANCES: float = 200.0
 
-
 @export var force_impulse: float = 20.0
+@export var wait_life_timer: float = 5.0
 
 var is_dragged: bool = false
 var is_moved: bool = false
@@ -17,8 +17,7 @@ func _ready() -> void:
 	start_position = self.position
 	self.sleeping_state_changed.connect(_on_sleeping_state_changed)
 	life_timer.timeout.connect(_on_timeout)
-	life_timer.wait_time = 5.0
-
+	life_timer.wait_time = wait_life_timer
 
 func _physics_process(_delta: float) -> void:
 	if is_dragged:

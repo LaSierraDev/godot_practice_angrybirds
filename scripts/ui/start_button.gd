@@ -1,8 +1,5 @@
 extends Button
 
-const LEVEL_1 = preload("uid://ca67vttmdke7q")
-const LEVEL_2 = preload("uid://eh8stvlb2xed")
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -14,7 +11,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_packed(LEVEL_1)
+	GameManager.load_next_level()
 
 func _on_toggled(toggled_on: bool) -> void:
 	print("Botón toogleado")
