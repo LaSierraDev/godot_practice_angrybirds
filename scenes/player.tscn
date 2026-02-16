@@ -69,4 +69,6 @@ position = Vector2(1, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3vyb7")
 
+[node name="LifeTimer" type="Timer" parent="." unique_id=1848174987]
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]

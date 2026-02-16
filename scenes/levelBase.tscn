@@ -30,7 +30,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("2_0ui80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground" unique_id=1001089038]
-position = Vector2(0, 1)
+position = Vector2(3, 9)
 shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="Ground2" type="StaticBody2D" parent="Enviroment" unique_id=619529637]
@@ -41,7 +41,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("2_0ui80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2" unique_id=182862087]
-position = Vector2(0, 1)
+position = Vector2(3, 9)
 shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="FollowCamera" type="Camera2D" parent="." unique_id=1745018961]
