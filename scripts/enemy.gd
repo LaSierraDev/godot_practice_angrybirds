@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func _destroy_me() -> void:
 	_create_explotion()
+	GameManager.decrease_enemies_left()
 	queue_free()
 
 func _create_explotion() -> void:
