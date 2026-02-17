@@ -27,4 +27,4 @@ func decrease_enemies_left() -> void:
 	enemies_left -= 1
 	print("Quedan: " + str(enemies_left) + " enemigos." )
 	if enemies_left == 0:
-		load_next_level()
+		load_next_level.call_deferred()

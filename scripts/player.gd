@@ -3,7 +3,7 @@ extends RigidBody2D
 const VECTOR_IMPULSE: Vector2 = Vector2(10, 10)
 const MAX_DRAG_DISTANCES: float = 200.0
 
-@export var force_impulse: float = 20.0
+@export var force_impulse: float = 15.0
 @export var wait_life_timer: float = 5.0
 
 var is_dragged: bool = false
