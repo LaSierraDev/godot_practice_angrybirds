@@ -1,7 +1,5 @@
 extends Node
 
-signal decrease_remaining_throws()
-
 const MAIN = preload("res://scenes/ui/main.tscn")
 const LEVELS: Dictionary = {
 	1: preload("res://scenes/levels/level_1.tscn"),
@@ -47,7 +45,6 @@ func decrease_enemies_left() -> void:
 
 func decrease_current_throwing() -> void:
 	current_throwing -= 1
-	decrease_remaining_throws.emit()
 	
 	if current_throwing <= 0:
 		is_throwing = false

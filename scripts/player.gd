@@ -62,6 +62,8 @@ func _impulse():
 	apply_impulse(force_vector * force_impulse)
 	life_timer.start()
 	GameManager.decrease_current_throwing()
+	
+	SignalManager.player_launched.emit()
 
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
