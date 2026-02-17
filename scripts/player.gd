@@ -20,7 +20,7 @@ func _ready() -> void:
 	life_timer.wait_time = wait_life_timer
 
 func _physics_process(_delta: float) -> void:
-	if is_dragged:
+	if is_dragged and GameManager.is_throwing:
 		_drag()
 		_update_line() 
 		_check_release()
@@ -54,7 +54,6 @@ func _drag():
 	
 	self.position = start_position + drag_vector
 
-
 func _impulse():
 	is_dragged = false
 	self.freeze = false
@@ -62,6 +61,7 @@ func _impulse():
 	var force_vector: Vector2 = start_position - self.position
 	apply_impulse(force_vector * force_impulse)
 	life_timer.start()
+	GameManager.decrease_current_throwing()
 
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
@@ -70,7 +70,6 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			is_dragged = true
 		else: 
 			is_dragged = false
-
 
 func _on_sleeping_state_changed() -> void:
 	self.queue_free()

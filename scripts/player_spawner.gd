@@ -15,4 +15,5 @@ func _create_player() -> void:
 	player_spawned.emit(player_instance)
 
 func _on_player_tree_exited() -> void:
-	_create_player()
+	if GameManager.is_throwing:
+		_create_player()

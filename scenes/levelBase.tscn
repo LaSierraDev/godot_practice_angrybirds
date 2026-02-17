@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cabkhsumpk3c3" path="res://assets/sprites/ground.png" id="2_0ui80"]
 [ext_resource type="Script" uid="uid://dbytgji44in8p" path="res://scripts/follow_camera.gd" id="3_uo60w"]
 [ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="4_3xyx3"]
+[ext_resource type="PackedScene" uid="uid://cgfm0ect7o85k" path="res://scenes/ui/hud.tscn" id="6_uo60w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(2400, 160)
@@ -45,6 +46,10 @@ texture = ExtResource("2_0ui80")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2" unique_id=182862087]
 position = Vector2(3, 9)
 shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1731581017]
+
+[node name="HUD" parent="CanvasLayer" unique_id=750148986 instance=ExtResource("6_uo60w")]
 
 [node name="FollowCamera" type="Camera2D" parent="." unique_id=1745018961]
 position = Vector2(960, 540)
