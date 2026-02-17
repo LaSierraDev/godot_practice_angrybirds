@@ -20,7 +20,7 @@ func _ready() -> void:
 	life_timer.wait_time = wait_life_timer
 
 func _physics_process(_delta: float) -> void:
-	if is_dragged and GameManager.is_throwing:
+	if is_dragged and GameManager.has_been_launched():
 		_drag()
 		_update_line() 
 		_check_release()

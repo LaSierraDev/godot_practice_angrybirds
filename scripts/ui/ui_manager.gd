@@ -2,7 +2,7 @@ extends Control
 
 @onready var launches_label: Label = $MarginContainer/LaunchesLabel
 
-var total_launches: int =  GameManager.current_throwing
+var total_launches: int =  GameManager.current_launches
 var actual_launches: int = total_launches
 
 func _ready() -> void:

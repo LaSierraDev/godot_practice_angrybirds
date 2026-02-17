@@ -7,9 +7,9 @@ const LEVELS: Dictionary = {
 }
 
 var current_level: int = 0
-var current_throwing: int = 3:
+var current_launches: int = 3:
 	get: 
-		return current_throwing
+		return current_launches
 
 var enemies_left: int = 0:
 	set(enemies):
@@ -17,12 +17,12 @@ var enemies_left: int = 0:
 	get:
 		return enemies_left
 
-var is_throwing: bool = true
+var _has_been_launched: bool = true
 
 
-func _reset_current_throwing() -> void:
-	current_throwing = 3
-	is_throwing = true
+func _reset_launches() -> void:
+	current_launches = 3
+	_has_been_launched = true
 
 
 func load_next_level() -> void:
@@ -30,7 +30,9 @@ func load_next_level() -> void:
 	
 	if current_level > LEVELS.size():
 		return
-	else: get_tree().change_scene_to_packed(LEVELS[current_level])
+	else: 
+		_reset_launches()
+		get_tree().change_scene_to_packed(LEVELS[current_level])
 
 
 func decrease_enemies_left() -> void:
@@ -44,8 +46,11 @@ func decrease_enemies_left() -> void:
 
 
 func decrease_current_throwing() -> void:
-	current_throwing -= 1
+	current_launches -= 1
 	
-	if current_throwing <= 0:
-		is_throwing = false
+	if current_launches <= 0:
+		_has_been_launched = false
 		print("No se puede lanzar más")
+
+func has_been_launched() -> bool:
+	return _has_been_launched
