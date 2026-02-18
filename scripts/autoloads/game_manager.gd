@@ -5,6 +5,7 @@ const LEVELS: Dictionary = {
 	1: preload("res://scenes/levels/level_1.tscn"),
 	2: preload("res://scenes/levels/level_2.tscn"), 
 }
+const SCORE_SCREEN = preload("uid://bq16u2a41qckq")
 
 var current_level: int = 0
 var current_launches: int = 3:
@@ -33,7 +34,7 @@ func load_next_level() -> void:
 	current_level += 1
 	
 	if current_level > LEVELS.size():
-		return
+		_score_screen()
 	else: 
 		_reset_launches()
 		get_tree().change_scene_to_packed(LEVELS[current_level])
@@ -55,6 +56,9 @@ func decrease_current_throwing() -> void:
 	
 	if current_launches <= 0:
 		has_been_launched = false
+
+func _score_screen() -> void: 
+		get_tree().change_scene_to_packed(SCORE_SCREEN)
 
 func _on_next_level() -> void:
 	load_next_level()

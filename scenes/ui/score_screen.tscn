@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bq16u2a41qckq"]
+
+[ext_resource type="Texture2D" uid="uid://4ugc3vu4o80t" path="res://assets/sprites/bg.png" id="1_yks23"]
+
+[node name="ScoreScreen" type="Control" unique_id=241787832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=675850577]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yks23")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=592240884]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 1320.0
+offset_bottom = 880.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=670238627]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1896058018]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="LaunchesLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=377275456]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Launches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel1" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=286412254]
+layout_mode = 2
+text = "LEVEL 1: 5"
+horizontal_alignment = 1
+
+[node name="LevelLabel2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1744098261]
+layout_mode = 2
+text = "LEVEL 1: 8"
+horizontal_alignment = 1
+
+[node name="LabelLabel3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1009202971]
+layout_mode = 2
+text = "LEVEL 3: 7"
+horizontal_alignment = 1
+
+[node name="ResetButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1686639733]
+layout_mode = 2
+text = "Go Back"
