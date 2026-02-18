@@ -7,7 +7,7 @@
 [node name="Level1" unique_id=1314270150 instance=ExtResource("1_ksju7")]
 
 [node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(2004617577) index="0" unique_id=1319069159 instance=ExtResource("2_nsrm0")]
-position = Vector2(1760, 920)
+position = Vector2(1520, 840)
 
 [node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(2004617577) index="1" unique_id=21645073 instance=ExtResource("2_nsrm0")]
 position = Vector2(1520, 920)

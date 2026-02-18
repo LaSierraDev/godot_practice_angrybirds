@@ -28,3 +28,11 @@ theme_override_constants/margin_bottom = 30
 layout_mode = 2
 size_flags_vertical = 0
 text = "Launches: 0"
+
+[node name="LevelCompletedLabel" type="Label" parent="MarginContainer" unique_id=212948687]
+visible = false
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Level completed!"
+horizontal_alignment = 1
+vertical_alignment = 1

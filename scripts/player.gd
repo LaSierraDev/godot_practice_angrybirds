@@ -19,8 +19,9 @@ func _ready() -> void:
 	life_timer.timeout.connect(_on_timeout)
 	life_timer.wait_time = wait_life_timer
 
+
 func _physics_process(_delta: float) -> void:
-	if is_dragged and GameManager.has_been_launched():
+	if is_dragged and GameManager.has_been_launched:
 		_drag()
 		_update_line() 
 		_check_release()
@@ -54,6 +55,7 @@ func _drag():
 	
 	self.position = start_position + drag_vector
 
+
 func _impulse():
 	is_dragged = false
 	self.freeze = false
@@ -73,8 +75,10 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		else: 
 			is_dragged = false
 
+
 func _on_sleeping_state_changed() -> void:
 	self.queue_free()
+
 
 func _on_timeout():
 	self.queue_free()

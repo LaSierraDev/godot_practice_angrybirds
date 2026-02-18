@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d1fsof4qmgudk" path="res://scripts/level_base.gd" id="1_0ui80"]
 [ext_resource type="Texture2D" uid="uid://4ugc3vu4o80t" path="res://assets/sprites/bg.png" id="1_k3o3r"]
 [ext_resource type="Texture2D" uid="uid://cabkhsumpk3c3" path="res://assets/sprites/ground.png" id="2_0ui80"]
+[ext_resource type="Script" uid="uid://dknx3x8fin4bc" path="res://scripts/timers/level_complete_timer.gd" id="2_3xyx3"]
 [ext_resource type="Script" uid="uid://dbytgji44in8p" path="res://scripts/follow_camera.gd" id="3_uo60w"]
 [ext_resource type="Script" uid="uid://dvhial8t3xtpj" path="res://scripts/player_spawner.gd" id="4_3xyx3"]
 [ext_resource type="PackedScene" uid="uid://cgfm0ect7o85k" path="res://scenes/ui/HUD.tscn" id="6_uo60w"]
@@ -12,6 +13,11 @@ size = Vector2(2400, 160)
 
 [node name="LevelBase" type="Node2D" unique_id=1314270150]
 script = ExtResource("1_0ui80")
+
+[node name="LevelCompleteTimer" type="Timer" parent="." unique_id=367244418]
+wait_time = 2.0
+one_shot = true
+script = ExtResource("2_3xyx3")
 
 [node name="Enviroment" type="Node2D" parent="." unique_id=459618490]
 
