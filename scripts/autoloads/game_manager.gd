@@ -8,6 +8,7 @@ const LEVELS: Dictionary = {
 const SCORE_SCREEN = preload("uid://bq16u2a41qckq")
 
 var current_level: int = 0
+var current_score: int = 0
 var current_launches: int = 3:
 	get: 
 		return current_launches
@@ -21,6 +22,13 @@ var enemies_left: int = 0:
 var has_been_launched: bool = true:
 	get: 
 		return has_been_launched
+
+var level_score: Dictionary = {}
+
+
+func add_level_launches() -> void:
+	level_score[current_level] = current_score
+	print(level_score)
 
 
 func load_next_level() -> void:
@@ -38,9 +46,11 @@ func decrease_enemies_left() -> void:
 		return
 	
 	enemies_left -= 1
+	current_score += 1
 	print("Quedan: " + str(enemies_left) + " enemigos." )
 	if enemies_left == 0:
 		SignalManager.level_completed.emit()
+		add_level_launches()
 		has_been_launched = false
 
 
@@ -62,7 +72,6 @@ func _reset_launches() -> void:
 
 func _score_screen() -> void: 
 		get_tree().change_scene_to_packed(SCORE_SCREEN)
-
 
 func _on_next_level() -> void:
 	load_next_level()

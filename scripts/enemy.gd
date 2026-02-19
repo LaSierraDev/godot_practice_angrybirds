@@ -2,7 +2,7 @@ extends RigidBody2D
 
 @onready var explotion_scene: PackedScene = preload("res://scenes/explotion.tscn")
 
-@export var velocity_treshold: float = 100.0
+@export var velocity_treshold: float = 10
 
 var explotion_scene_instantiate
 
@@ -20,10 +20,7 @@ func _create_explotion() -> void:
 	explotion_scene_instantiate.position = self.position
 
 func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("player") or (body.is_in_group("crate") and body.linear_velocity.length() 
+	> velocity_treshold):
 		_destroy_me()
 		return
-	
-	if body is RigidBody2D and body.linear_velocity.length() > velocity_treshold:
-		if body.linear_velocity.normalized().y > 0:
-			_destroy_me()
