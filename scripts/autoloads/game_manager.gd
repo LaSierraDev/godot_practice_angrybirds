@@ -47,7 +47,6 @@ func decrease_enemies_left() -> void:
 	
 	enemies_left -= 1
 	current_score += 1
-	print("Quedan: " + str(enemies_left) + " enemigos." )
 	if enemies_left == 0:
 		SignalManager.level_completed.emit()
 		add_level_launches()
