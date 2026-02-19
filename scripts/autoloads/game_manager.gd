@@ -73,5 +73,13 @@ func _reset_launches() -> void:
 func _score_screen() -> void: 
 		get_tree().change_scene_to_packed(SCORE_SCREEN)
 
+
+func _reset_game() -> void:
+	current_level = 0
+	current_score = 0
+	current_launches = 3
+	load_next_level()
+
+
 func _on_next_level() -> void:
 	load_next_level()
