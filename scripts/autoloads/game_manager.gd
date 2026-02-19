@@ -78,7 +78,7 @@ func _reset_game() -> void:
 	current_level = 0
 	current_score = 0
 	current_launches = 3
-	load_next_level()
+	get_tree().change_scene_to_packed(MAIN)
 
 
 func _on_next_level() -> void:
