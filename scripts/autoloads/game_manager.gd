@@ -22,13 +22,6 @@ var has_been_launched: bool = true:
 	get: 
 		return has_been_launched
 
-func _ready() -> void:
-	SignalManager.next_level.connect(_on_next_level)
-
-func _reset_launches() -> void:
-	current_launches = 3
-	has_been_launched = true
-
 
 func load_next_level() -> void:
 	current_level += 1
@@ -57,8 +50,19 @@ func decrease_current_throwing() -> void:
 	if current_launches <= 0:
 		has_been_launched = false
 
+
+func _ready() -> void:
+	SignalManager.next_level.connect(_on_next_level)
+
+
+func _reset_launches() -> void:
+	current_launches = 3
+	has_been_launched = true
+
+
 func _score_screen() -> void: 
 		get_tree().change_scene_to_packed(SCORE_SCREEN)
+
 
 func _on_next_level() -> void:
 	load_next_level()
