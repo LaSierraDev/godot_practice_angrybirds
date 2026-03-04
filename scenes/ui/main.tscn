@@ -47,7 +47,7 @@ text = "Crazy Birds"
 [node name="SubTitleLabel" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=44575364]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "- Game Practise -"
+text = "- Practice game -"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1692017375]
